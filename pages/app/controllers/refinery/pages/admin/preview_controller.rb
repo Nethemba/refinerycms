@@ -40,6 +40,14 @@ module Refinery
             parts_attributes: [:id, :title, :body, :position]
           )
         end
+
+        def verify_authenticity_token
+          unless verified_request?
+            logger.warn "[SECURITY]: CSRF detected! REFERRER: #{request.referrer} REMOTE_IP: #{request.remote_ip}"
+
+            error_404
+          end
+        end
       end
     end
   end
