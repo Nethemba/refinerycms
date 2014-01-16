@@ -9,6 +9,7 @@ module Refinery
     image_accessor :image
 
     validates :image, :presence  => true
+    validates_with ImageNameValidator
     validates_with ImageSizeValidator
     validates_with ImageUpdateValidator, :on => :update
     validates_property :mime_type,

@@ -42,3 +42,4 @@ en:
           too_big: Image should be smaller than %{size} bytes in size
           incorrect_format: 'Your image must be either a JPG, PNG or GIF'
           different_file_name: New image can't have different file name
+          invalid_name: 'Image name can consist only from alphabet characters, numbers, space and symbols: _ - . , ; $ ( )'

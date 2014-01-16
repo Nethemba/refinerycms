@@ -34,3 +34,4 @@ en:
         refinery/resource:
           blank: You must specify file for upload
           too_big: File should be smaller than %{size} bytes in size
+          invalid_name: 'File name can consist only from alphabet characters, numbers, space and symbols: _ - . , ; $ ( )'

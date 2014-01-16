@@ -10,6 +10,7 @@ module Refinery
 
     validates :file, :presence => true
     validates_with FileSizeValidator
+    validates_with FileNameValidator
 
     delegate :ext, :size, :mime_type, :url, :to => :file
 
