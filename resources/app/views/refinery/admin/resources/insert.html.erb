@@ -47,7 +47,7 @@
     <% unless user_can_modify_resources %>
       link_dialog.init();
     <% end %>
-      resource_picker.init(<%= @callback.present? ? "self.parent.#{@callback}" : 'null' %>);
+      resource_picker.init(<%= @callback =~ /\A[\w_0-9]+\z/ ? "self.parent.#{@callback}" : 'null' %>);
     });
   </script>
 <% end %>

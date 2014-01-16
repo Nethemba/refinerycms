@@ -39,7 +39,7 @@
   <script>
     $(document).ready(function(){
       new ImageDialog({
-        callback: <%= @callback.present? ? "self.parent.#{h @callback}" : 'null' %>,
+        callback: <%= @callback =~ /\A[\w_0-9]+\z/ ? "self.parent.#{@callback}" : 'null' %>,
         multiple: <%= @multiple == 'true' %>
       }).create();
 
